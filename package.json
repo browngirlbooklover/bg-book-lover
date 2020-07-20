@@ -6,7 +6,8 @@
     "dev": "next dev -p 8080",
     "build": "next build",
     "start": "next start",
-    "static-build": "next export"
+    "static-build": "next export",
+    "stylelint": "stylelint \"src/**/*.scss\" --fix"
   },
   "dependencies": {
     "@zeit/next-sass": "^1.0.1",
