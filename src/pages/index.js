@@ -1,5 +1,5 @@
-import Head from 'next/head'
-import style from './index.scss'
+import Head from 'next/head';
+import style from './index.scss';
 
 const Home = () => (
   <div className="container">
@@ -10,6 +10,10 @@ const Home = () => (
 
     <main>
       <h1 className={style.header1}>Yo Yo Yo</h1>
+      <div className={style.container}>
+        <div>Box 1</div>
+        <div>box 2</div>
+      </div>
     </main>
 
     <footer>
@@ -21,8 +25,7 @@ const Home = () => (
         Powered by <img src="/zeit.svg" alt="ZEIT Logo" />
       </a>
     </footer>
-
   </div>
-)
+);
 
-export default Home
+export default Home;
