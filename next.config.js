@@ -1,6 +1,5 @@
-const withSass = require('@zeit/next-sass');
-
-module.exports = withSass({
-  cssModules: true,
-  postcssLoaderOptions: {},
-});
+module.exports = {
+  sassOptions: {
+    postcssLoaderOptions: {},
+  },
+};
