@@ -1,0 +1,39 @@
+@import './colors';
+@import './fonts';
+@import './spacing';
+@import './layout';
+
+// brand primary
+$primary-100: $blue-25;
+$primary-200: $blue-50;
+$primary-300: $blue-300;
+$primary-400: $blue-500;
+$primary-500: $blue-700;
+
+// brand secondary
+$secondary-red: $red-500;
+$secondary-green: $green-500;
+
+// neutrals
+$neutral-100: $black-200;
+$neutral-200: $black-300;
+$neutral-300: $black-400;
+$neutral-400: $black-700;
+$neutral-500: $black-800;
+
+// validation
+$validation-red: $red-800;
+$validation-green: $green-600;
+$validation-yellow: $yellow;
+
+// basic
+$grey: $black-500;
+$black: $black-700;
+$white: $white-100;
+
+// text
+$link-color: $blue-500;
+$text-color: $black-800;
+
+// typography
+$main-font-family: $font-family;
