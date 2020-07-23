@@ -1,0 +1,36 @@
+.jsx-footer {
+  align-items: center;
+  background-color: rgb(11, 79, 108);
+  display: flex;
+  height: 96px;
+  justify-content: space-between;
+  padding: 0 24px;
+}
+
+.copyright {
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+}
+
+.social {
+  display: flex;
+
+  a {
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    display: flex;
+    height: 32px;
+    justify-content: center;
+    width: 32px;
+  }
+
+  a:not(:last-of-type) {
+    margin-right: 16px;
+  }
+
+  img {
+    height: 24px;
+    width: 24px;
+  }
+}

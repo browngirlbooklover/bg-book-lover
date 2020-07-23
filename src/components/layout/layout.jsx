@@ -1,7 +1,4 @@
-// import Alert from './alert'
-// import Footer from './footer'
-// import Meta from './meta'
-
+import Footer from '../footer/footer';
 import Header from '../header/header';
 
 const Layout = ({ children }) => {
@@ -9,7 +6,7 @@ const Layout = ({ children }) => {
     <>
       <Header />
       <main>{children}</main>
-      <footer>© 2020 Starter Next</footer>
+      <Footer />
     </>
   );
 };
