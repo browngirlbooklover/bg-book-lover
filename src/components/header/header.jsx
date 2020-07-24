@@ -1,18 +1,19 @@
 import styles from './header.module.scss';
 
-const Header = () => (
+const Header = ({ navLinks = [] }) => (
   <header className={styles['main-header']} role="banner">
-    <div class={styles.logo}>
+    <div className={styles.logo}>
       <img src="https://www.pandaipsum.com/img/panda.png" alt="logo" />
     </div>
-    <nav class={styles['nav-container']} role="navigation">
-      <ol class={styles.list}>
-        <li>
-          <a href="/">home</a>
-        </li>
-        <li>
-          <a href="/about">About</a>
-        </li>
+    <nav className={styles['nav-container']} role="navigation">
+      <ol className={styles.list}>
+        {navLinks.map((v) => (
+          <li key={v}>
+            <a href={v === 'index' ? '/' : `/${v}`}>
+              {v === 'index' ? 'home' : v}
+            </a>
+          </li>
+        ))}
       </ol>
     </nav>
   </header>

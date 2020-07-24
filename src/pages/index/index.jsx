@@ -1,7 +1,8 @@
 import Head from 'next/head';
 import style from './index.module.scss';
+import { getPageLists } from '../../lib/api';
 
-const Home = () => (
+const Home = ({}) => (
   <>
     <Head>
       <title>Create Next App</title>
@@ -15,5 +16,13 @@ const Home = () => (
     </div>
   </>
 );
+
+export const getStaticProps = async () => {
+  return {
+    props: {
+      navLinks: getPageLists(),
+    },
+  };
+};
 
 export default Home;

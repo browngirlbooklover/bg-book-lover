@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import { getPageLists } from '../../lib/api';
 
 const About = () => (
   <>
@@ -10,5 +11,13 @@ const About = () => (
     <h1>About</h1>
   </>
 );
+
+export const getStaticProps = async () => {
+  return {
+    props: {
+      navLinks: getPageLists(),
+    },
+  };
+};
 
 export default About;

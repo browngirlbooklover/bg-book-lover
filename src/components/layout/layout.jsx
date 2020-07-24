@@ -2,10 +2,10 @@ import Footer from '../footer/footer';
 import Header from '../header/header';
 import styles from './layout.module.scss';
 
-const Layout = ({ children }) => {
+const Layout = ({ navLinks, children }) => {
   return (
     <>
-      <Header />
+      <Header navLinks={navLinks} />
       <main className={styles.body}>{children}</main>
       <Footer />
     </>
