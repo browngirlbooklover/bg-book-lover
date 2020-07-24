@@ -1,23 +1,17 @@
 import Head from 'next/head';
-import { getPageLists } from '../../lib/api';
+import { getPageProps } from '../../lib/api';
 
-const About = () => (
+const About = ({ data }) => (
   <>
     <Head>
-      <title>Create Next App/About</title>
+      <title>{data.title}</title>
       <link rel="icon" href="/favicon.ico" />
     </Head>
 
-    <h1>About</h1>
+    <h1>{data.header}</h1>
   </>
 );
 
-export const getStaticProps = async () => {
-  return {
-    props: {
-      navLinks: getPageLists(),
-    },
-  };
-};
+export const getStaticProps = async () => getPageProps('about');
 
 export default About;

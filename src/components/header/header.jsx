@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import styles from './header.module.scss';
 
 const Header = ({ navLinks = [] }) => (
@@ -9,9 +10,9 @@ const Header = ({ navLinks = [] }) => (
       <ol className={styles.list}>
         {navLinks.map((v) => (
           <li key={v}>
-            <a href={v === 'index' ? '/' : `/${v}`}>
-              {v === 'index' ? 'home' : v}
-            </a>
+            <Link href={v === 'index' ? '/' : `/${v}`}>
+              <a>{v === 'index' ? 'home' : v}</a>
+            </Link>
           </li>
         ))}
       </ol>

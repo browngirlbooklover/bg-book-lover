@@ -1,15 +1,14 @@
 import Head from 'next/head';
 import style from './index.module.scss';
-import { getPageLists } from '../../lib/api';
+import { getPageProps } from '../../lib/api';
 
-const Home = ({}) => (
+const Home = ({ data }) => (
   <>
     <Head>
-      <title>Create Next App</title>
+      <title>{data.title}</title>
       <link rel="icon" href="/favicon.ico" />
     </Head>
-
-    <h1 className={style.header1}>Yo Yo Yo</h1>
+    <h1 className={style.header1}>{data.header}</h1>
     <div className={style.container}>
       <div>Box 1</div>
       <div>box 2</div>
@@ -17,12 +16,6 @@ const Home = ({}) => (
   </>
 );
 
-export const getStaticProps = async () => {
-  return {
-    props: {
-      navLinks: getPageLists(),
-    },
-  };
-};
+export const getStaticProps = async () => getPageProps('index');
 
 export default Home;
