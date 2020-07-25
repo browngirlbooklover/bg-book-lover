@@ -1,5 +1,5 @@
 ---
 title: 'Create Next App/About'
-description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilisi morbi tempus.'
+description: 'Panda Ipsum the red panda relaxing in the Red Panda. Female pandas only ovulate once each year. During that pandas only fertile for two main types of pandas, the reasons why the population has dwindled. The red panda bear giant black-and-white panda dancing panda. '
 header: 'About'
 ---

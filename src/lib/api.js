@@ -35,7 +35,7 @@ export function getPageData(page) {
  * @returns Page Props
  */
 export function getPageProps(page) {
-  const { data, content } = getPageData('index');
+  const { data, content } = getPageData(page);
   return {
     props: {
       navLinks: getPageLists(),

@@ -5,7 +5,7 @@ const About = ({ data }) => (
   <>
     <Head>
       <title>{data.title}</title>
-      <link rel="icon" href="/favicon.ico" />
+      <meta name="Description" content={data.description}></meta>
     </Head>
 
     <h1>{data.header}</h1>

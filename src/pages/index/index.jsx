@@ -6,7 +6,7 @@ const Home = ({ data }) => (
   <>
     <Head>
       <title>{data.title}</title>
-      <link rel="icon" href="/favicon.ico" />
+      <meta name="Description" content={data.description}></meta>
     </Head>
     <h1 className={style.header1}>{data.header}</h1>
     <div className={style.container}>
