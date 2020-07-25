@@ -1,14 +1,14 @@
 import Head from 'next/head';
 import { getPageProps } from '../../lib/api';
 
-const About = ({ data }) => (
+const About = ({ data, content }) => (
   <>
     <Head>
       <title>{data.title}</title>
       <meta name="Description" content={data.description}></meta>
     </Head>
 
-    <h1>{data.header}</h1>
+    <div dangerouslySetInnerHTML={{ __html: content }} />
   </>
 );
 

@@ -1,18 +1,14 @@
 import Head from 'next/head';
-import style from './index.module.scss';
+// import style from './index.module.scss';
 import { getPageProps } from '../../lib/api';
 
-const Home = ({ data }) => (
+const Home = ({ data, content }) => (
   <>
     <Head>
       <title>{data.title}</title>
       <meta name="Description" content={data.description}></meta>
     </Head>
-    <h1 className={style.header1}>{data.header}</h1>
-    <div className={style.container}>
-      <div>Box 1</div>
-      <div>box 2</div>
-    </div>
+    <div dangerouslySetInnerHTML={{ __html: content }} />
   </>
 );
 
