@@ -18,7 +18,7 @@
 }
 
 .list {
-  display: flex;
+  display: none;
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -35,5 +35,46 @@
     font-size: $font-size-300;
     padding: $spacing-100 $spacing-300;
     text-decoration: none;
+  }
+}
+
+.drawer-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    font-size: $font-size-400;
+    padding: 16px 24px;
+    text-transform: capitalize;
+  }
+
+  li:nth-of-type(even) {
+    background-color: $primary-100;
+    color: $white;
+  }
+}
+
+.toggle-menu {
+  background-color: $white;
+  border: 0;
+  border-radius: $spacing-50;
+  color: $primary-100;
+  display: block;
+  font-size: $font-size-700;
+  padding: $spacing-100 $spacing-300;
+
+  .sub-text {
+    font-size: $font-size-50;
+  }
+}
+
+@media only screen and (min-width: 750px) {
+  .list {
+    display: flex;
+  }
+
+  .toggle-menu {
+    display: none;
   }
 }
