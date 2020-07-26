@@ -31,6 +31,14 @@ npm run serve
 yarn serve
 ```
 
+## Icons
+
+This starter uses the [React Icons](https://react-icons.github.io/) as it's icon library.
+
+## UI Library
+
+Some component in this starter is from [charka](https://chakra-ui.com/).
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:

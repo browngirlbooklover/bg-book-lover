@@ -3,7 +3,7 @@ import styles from './footer.module.scss';
 const Footer = () => (
   <footer className={styles['jsx-footer']}>
     <div className={styles.copyright}>
-      <small>&copy; Copyright 202020, Example Corporation</small>
+      <small>&copy; 2020, Example Corporation</small>
     </div>
     <div className={styles.social}>
       <a href="#">
