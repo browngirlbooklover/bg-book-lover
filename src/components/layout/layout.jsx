@@ -4,11 +4,12 @@ import Header from '../header/header';
 import styles from './layout.module.scss';
 
 const Layout = ({ data, navLinks, children }) => {
+  const { title = '', description = '' } = data;
   return (
     <>
       <Head>
-        <title>{data.title}</title>
-        <meta name="Description" content={data.description}></meta>
+        <title>{title}</title>
+        <meta name="Description" content={description}></meta>
         <meta name="keywords" content="next,sean,panda"></meta>
         <link rel="icon" href="/favicon.ico" />
       </Head>
