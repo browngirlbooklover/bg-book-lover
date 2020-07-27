@@ -1,6 +1,7 @@
 import { ThemeProvider, CSSReset } from '@chakra-ui/core';
 import Layout from '../components/layout/layout';
 import '../themes/global.scss';
+import { AnimatePresence } from 'framer-motion';
 
 function MyApp({ Component, pageProps }) {
   const { navLinks, data } = pageProps;
@@ -8,7 +9,9 @@ function MyApp({ Component, pageProps }) {
     <ThemeProvider>
       <CSSReset />
       <Layout data={data} navLinks={navLinks}>
-        <Component {...pageProps} />
+        <AnimatePresence exitBeforeEnter>
+          <Component {...pageProps} />
+        </AnimatePresence>
       </Layout>
     </ThemeProvider>
   );

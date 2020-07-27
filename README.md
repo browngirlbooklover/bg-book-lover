@@ -39,6 +39,10 @@ This starter uses the [React Icons](https://react-icons.github.io/) as it's icon
 
 Some component in this starter is from [charka](https://chakra-ui.com/).
 
+## Animation
+
+[Framer Motion](https://www.framer.com/api/motion/) is used as the animated library. A default fade in and out animation has been applied on to page transitions.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
