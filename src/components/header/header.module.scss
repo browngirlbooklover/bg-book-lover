@@ -45,13 +45,19 @@
 
   li {
     font-size: $font-size-400;
-    padding: 16px 24px;
     text-transform: capitalize;
   }
 
   li:nth-of-type(even) {
     background-color: $primary-100;
     color: $white;
+  }
+
+  a {
+    box-sizing: border-box;
+    display: block;
+    padding: 16px 24px;
+    width: 100%;
   }
 }
 

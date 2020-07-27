@@ -18,8 +18,7 @@ const DrawerMenu = ({ btnRef, isOpen, onClose, children }) => (
     >
       <DrawerOverlay />
       <DrawerContent>
-        <DrawerCloseButton />
-
+        <DrawerCloseButton size="lg" />
         <DrawerHeader></DrawerHeader>
         {children}
         <DrawerBody></DrawerBody>
