@@ -2,6 +2,7 @@
 import { getPageProps } from '../../lib/api';
 import { motion } from 'framer-motion';
 import { pageVariants } from '../../lib/motionVariants';
+import ReactMarkdown from 'react-markdown';
 
 const Home = ({ content }) => (
   <motion.div
@@ -10,7 +11,7 @@ const Home = ({ content }) => (
     exit="exit"
     variants={pageVariants}
   >
-    <div dangerouslySetInnerHTML={{ __html: content }} />
+    <ReactMarkdown>{content}</ReactMarkdown>
   </motion.div>
 );
 

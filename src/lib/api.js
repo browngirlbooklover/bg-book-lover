@@ -1,13 +1,5 @@
 import fs from 'fs';
 import matter from 'gray-matter';
-import { join } from 'path';
-import markdownToHtml from './markdownToHTML';
-
-const pagesDirectory = join(process.cwd(), 'src/data/pages');
-
-export function getPostSlugs() {
-  return fs.readdirSync(pagesDirectory);
-}
 
 /**
  * Returns a list pages
@@ -24,10 +16,9 @@ export function getPageLists() {
  * Get data associated with page from markdown file
  * @param {string} page name of page
  */
-export function getPageData(page) {
-  const fullPath = join(pagesDirectory, `${page}.md`);
-  const fileContents = fs.readFileSync(fullPath, 'utf8');
-  return matter(fileContents);
+export async function getPageData(page) {
+  const content = await import(`../data/pages/${page}.md`);
+  return matter(content.default);
 }
 
 /**
@@ -36,13 +27,13 @@ export function getPageData(page) {
  * @returns Page Props
  */
 export async function getPageProps(page) {
-  const { data, content } = getPageData(page);
-  const transformContent = await markdownToHtml(content);
+  const { data, content } = await getPageData(page);
+  console.log(data);
   return {
     props: {
       navLinks: getPageLists(),
       data,
-      content: transformContent,
+      content,
     },
   };
 }
