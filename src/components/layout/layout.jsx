@@ -14,6 +14,7 @@ const Layout = ({ data, navLinks, children }) => {
         <meta name="keywords" content="next,sean,panda"></meta>
         <link rel="canonical" href="https://www.amazon.com/"></link>
         <link rel="icon" href="/favicon.ico" />
+        <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
       </Head>
       <Header navLinks={navLinks} />
       <main className={styles.body}>{children}</main>
