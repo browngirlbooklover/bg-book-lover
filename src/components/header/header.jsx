@@ -22,7 +22,7 @@ const Header = ({ navLinks = [] }) => {
     <>
       <header className={styles['main-header']} role="banner">
         <div className={styles.logo}>
-          <img src="https://www.pandaipsum.com/img/panda.png" alt="logo" />
+          <img src="/bgbl-logo.webp" alt="logo" />
         </div>
         <nav className={styles['nav-container']} role="navigation">
           <button

@@ -4,14 +4,15 @@ import { motion } from 'framer-motion';
 import { pageVariants } from '../../lib/motionVariants';
 import ReactMarkdown from 'react-markdown';
 
-const Home = ({ content }) => (
+const Home = ({ data, content }) => (
   <motion.div
     initial="initial"
     animate="enter"
     exit="exit"
     variants={pageVariants}
   >
-    <ReactMarkdown>{content}</ReactMarkdown>
+    <h1 className="header-1">{data.mainHeader}</h1>
+    {/* <ReactMarkdown>{content}</ReactMarkdown> */}
   </motion.div>
 );
 
