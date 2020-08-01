@@ -14,7 +14,6 @@ const Image = ({
 
   useEffect(() => {
     if (isLazy && imgEl) {
-      console.log(imgEl);
       if ('IntersectionObserver' in window) {
         let lazyImageObserver = new IntersectionObserver((entries) => {
           entries.forEach((entry) => {

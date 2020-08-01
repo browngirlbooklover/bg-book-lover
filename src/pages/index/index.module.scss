@@ -1,0 +1,9 @@
+@import '../../themes/theme';
+
+.acc-container {
+  display: grid;
+  grid-column-gap: $spacing-100;
+  grid-row-gap: $spacing-200;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  width: 100%;
+}

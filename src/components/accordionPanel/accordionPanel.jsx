@@ -7,11 +7,20 @@ const variants = {
   collapsed: { opacity: 0, height: 0 },
 };
 
-const AccordionPanel = ({ id, key, title, children, open = false, onSel }) => (
+const AccordionPanel = ({
+  id,
+  index,
+  title,
+  children,
+  open = false,
+  onSel,
+}) => (
   <>
     <h3>
       <button
-        onClick={() => onSel(key)}
+        onClick={() => {
+          onSel(open ? false : index);
+        }}
         aria-expanded={open}
         className={styles['trigger']}
         aria-controls={`sect${id}`}
