@@ -1,10 +1,11 @@
 import styles from './accordionPanel.module.scss';
 import { AiOutlinePlus, AiOutlineMinus } from 'react-icons/ai';
 
-const AccordionPanel = ({ id, title, children, open = false }) => (
+const AccordionPanel = ({ id, key, title, children, open = false, onSel }) => (
   <>
     <h3>
       <button
+        onClick={() => onSel(key)}
         aria-expanded={open}
         className={styles['trigger']}
         aria-controls={`sect${id}`}
@@ -13,7 +14,7 @@ const AccordionPanel = ({ id, title, children, open = false }) => (
         <span className={styles['title']}>
           {title}
           <span className={styles['icon']}>
-            {open ? <AiOutlinePlus /> : <AiOutlineMinus />}
+            {open ? <AiOutlineMinus /> : <AiOutlinePlus />}
           </span>
         </span>
       </button>
