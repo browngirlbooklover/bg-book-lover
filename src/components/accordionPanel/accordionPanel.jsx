@@ -1,27 +1,32 @@
 import styles from './accordionPanel.module.scss';
+import { AiOutlinePlus, AiOutlineMinus } from 'react-icons/ai';
 
 const AccordionPanel = ({ id, title, children, open = false }) => (
   <>
     <h3>
       <button
         aria-expanded={open}
-        className={styles['accordion-trigger']}
-        aria-controls="sect1"
+        className={styles['trigger']}
+        aria-controls={`sect${id}`}
         id={`accordion${id}`}
       >
-        <span className={styles['accordion-title']}>
+        <span className={styles['title']}>
           {title}
-          <span className={styles['accordion-icon']}></span>
+          <span className={styles['icon']}>
+            {open ? <AiOutlinePlus /> : <AiOutlineMinus />}
+          </span>
         </span>
       </button>
     </h3>
     <div
-      id="sect1"
+      id={`sect${id}`}
       role="region"
       aria-labelledby={`accordion${id}`}
-      className="Accordion-panel"
+      className={`panel ${open ? 'open' : ''}`}
     >
       {children}
     </div>
   </>
 );
+
+export default AccordionPanel;

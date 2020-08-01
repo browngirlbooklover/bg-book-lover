@@ -2,7 +2,7 @@
 import { getPageProps } from '../../lib/api';
 import { motion } from 'framer-motion';
 import { pageVariants } from '../../lib/motionVariants';
-import ReactMarkdown from 'react-markdown';
+// import ReactMarkdown from 'react-markdown';
 
 const Home = ({ data, content }) => (
   <motion.div
