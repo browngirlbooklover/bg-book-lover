@@ -1,5 +1,6 @@
 import styles from './accordion.module.scss';
 import { Children, isValidElement, cloneElement, useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const Accordion = ({ children }) => {
   const [sel, setSel] = useState(0);
@@ -7,8 +8,6 @@ const Accordion = ({ children }) => {
     <div className={styles.accordion}>
       {Children.map(children, (child, i) => {
         if (isValidElement(child)) {
-          const open = sel === i;
-          console.log(open, sel, i);
           const props = {
             open: sel === undefined ? i === 0 : sel === i,
             onSel: () => {

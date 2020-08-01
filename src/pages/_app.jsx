@@ -6,6 +6,7 @@ import { AnimatePresence } from 'framer-motion';
 function MyApp({ Component, pageProps }) {
   // during build process these properties are null and can cause errors
   const { navLinks = [], data = {} } = pageProps;
+
   return (
     <ThemeProvider>
       <CSSReset />

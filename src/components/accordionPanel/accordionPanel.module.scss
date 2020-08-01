@@ -1,1 +1,33 @@
 @import '../../themes/theme';
+
+.trigger {
+  color: $text-color-100;
+  font-size: $font-size-500;
+  padding: $spacing-50 $spacing-100;
+  width: 100%;
+
+  &:nth-of-type(1) {
+    background-color: $tertiary-300;
+  }
+
+  &:nth-of-type(2) {
+    background-color: $primary-100;
+  }
+
+  .title {
+    align-items: center;
+    display: flex;
+  }
+
+  .icon {
+    margin-right: $spacing-100;
+  }
+}
+
+.panel {
+  background-color: $tertiary-100;
+  box-sizing: border-box;
+  overflow: scroll;
+  padding: $spacing-150 $spacing-100;
+  width: 100%;
+}

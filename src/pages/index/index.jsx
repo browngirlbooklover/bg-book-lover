@@ -4,9 +4,9 @@ import { motion } from 'framer-motion';
 import { pageVariants } from '../../lib/motionVariants';
 import Accordion from '../../components/accordion/accordion';
 import AccordionPanel from '../../components/accordionPanel/accordionPanel';
-// import ReactMarkdown from 'react-markdown';
+import Image from '../../components/image/image';
 
-const Home = ({ data, content }) => {
+const Home = ({ data }) => {
   const { mainHeader, drawer } = data;
   return (
     <motion.div
@@ -19,7 +19,9 @@ const Home = ({ data, content }) => {
       <Accordion>
         {drawer.map((obj, i) => (
           <AccordionPanel id={`ap${i}`} key={i} title={obj.label}>
-            <img src={obj.books[0].image} alt={obj.books[0].alt} />
+            {obj.books.map((bk) => (
+              <Image key={bk.alt} src={bk.image} alt={bk.alt} />
+            ))}
           </AccordionPanel>
         ))}
       </Accordion>
