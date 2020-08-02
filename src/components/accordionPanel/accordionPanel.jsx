@@ -34,8 +34,8 @@ const AccordionPanel = ({
         </div>
       </button>
     </h3>
-    {open && (
-      <AnimatePresence>
+    <AnimatePresence initial={false}>
+      {open && (
         <motion.div
           id={`sect${id}`}
           role="region"
@@ -44,16 +44,13 @@ const AccordionPanel = ({
           initial="collapsed"
           animate="open"
           exit="collapsed"
-          variants={{
-            open: { opacity: 1, height: 'auto' },
-            collapsed: { opacity: 0, height: 0 },
-          }}
+          variants={variants}
           transition={{ duration: 0.8, ease: [0.04, 0.62, 0.23, 0.98] }}
         >
           {children}
         </motion.div>
-      </AnimatePresence>
-    )}
+      )}
+    </AnimatePresence>
   </>
 );
 

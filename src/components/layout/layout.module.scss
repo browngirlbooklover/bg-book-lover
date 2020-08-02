@@ -1,5 +1,9 @@
+@import '../../themes/theme';
+
 .body {
   box-sizing: border-box;
-  min-height: calc(100vh - 180px);
-  padding: 24px;
+  margin: auto;
+  max-width: $bp-300;
+  min-height: calc(100vh - 11.25rem);
+  padding: $spacing-300;
 }

@@ -11,7 +11,7 @@ function MyApp({ Component, pageProps }) {
     <ThemeProvider>
       <CSSReset />
       <Layout data={data} navLinks={navLinks}>
-        <AnimatePresence exitBeforeEnter>
+        <AnimatePresence initial={false} exitBeforeEnter>
           <Component {...pageProps} />
         </AnimatePresence>
       </Layout>
