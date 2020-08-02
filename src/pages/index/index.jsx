@@ -7,9 +7,10 @@ import AccordionPanel from '../../components/accordionPanel/accordionPanel';
 import BookTile from '../../components/bookTile/bookTile';
 import BlockQuote from '../../components/blockQuote/blockQuote';
 import CtaBtn from '../../components/cta-btn/ctaBtn';
+import CardCta from '../../components/cardCta/cardCta';
 
 const Home = ({ data }) => {
-  const { mainHeader, drawer, blockQuote } = data;
+  const { mainHeader, drawer, blockQuote, callToActionCards = [] } = data;
   console.log(blockQuote);
   return (
     <motion.div
@@ -39,6 +40,9 @@ const Home = ({ data }) => {
           </AccordionPanel>
         ))}
       </Accordion>
+      {callToActionCards.map(({ image, caption }) => {
+        return <CardCta image={image} text={caption} />;
+      })}
     </motion.div>
   );
 };
