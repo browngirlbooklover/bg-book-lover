@@ -6,6 +6,14 @@ description: >-
   vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla
   facilisi morbi tempus.
 mainHeader: Welcome Book Lovers!
+blockQuote:
+  image:
+    src: /imgs/brooklyn-img-1.jpeg
+    alt: Brooklyn
+  quote: Crystelle’s life began when she was born. But it began again when he died.
+  book: Crystelle Mourning
+  author: Eisa Nefertari Ulen
+  link: /about
 drawer:
   - label: Powerful Memoirs
     books:
