@@ -9,10 +9,10 @@ import BlockQuote from '../../components/blockQuote/blockQuote';
 import CtaBtn from '../../components/cta-btn/ctaBtn';
 import CardCta from '../../components/cardCta/cardCta';
 import GroupLayout from '../../components/groupLayout/groupLayout';
+import Link from 'next/link';
 
 const Home = ({ data }) => {
   const { mainHeader, drawer, blockQuote, callToActionCards = [] } = data;
-  console.log(blockQuote);
   return (
     <motion.div
       className={styles.layout}
@@ -42,8 +42,20 @@ const Home = ({ data }) => {
         ))}
       </Accordion>
       <GroupLayout>
-        {callToActionCards.map(({ image, caption }) => {
-          return <CardCta image={image} text={caption} />;
+        {callToActionCards.map(({ image, caption, link }, i) => {
+          const relativePath = /^\//.test(link);
+          return relativePath ? (
+            <Link href={link} key={`card${i}`} passHref>
+              <CardCta image={image} text={caption} />
+            </Link>
+          ) : (
+            <CardCta
+              key={`card${i}`}
+              href={link}
+              image={image}
+              text={caption}
+            />
+          );
         })}
       </GroupLayout>
     </motion.div>

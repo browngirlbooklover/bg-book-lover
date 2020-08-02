@@ -28,7 +28,6 @@ export async function getPageData(page) {
  */
 export async function getPageProps(page) {
   const { data, content } = await getPageData(page);
-  console.log(data);
   return {
     props: {
       navLinks: getPageLists(),
