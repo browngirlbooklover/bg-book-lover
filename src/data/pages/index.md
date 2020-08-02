@@ -22,7 +22,7 @@ callToActionCards:
     caption: What’s on My Shelf?
     link: /about
   - image:
-      src: /imgs/library-img-1.jpeg
+      src: /imgs/library-img-2.jpeg
       alt: library
     caption: Most Beautiful Bookstores...
     link: https://www.amazon.com/Unconscious-Escape-Brenda-Ruppert-Bunkers-ebook/dp/B0831NP2D2/ref=sr_1_1_sspa?crid=4SA6UTLDO4QD&dchild=1&keywords=books+best+sellers&qid=1596380694&sprefix=book%2Caps%2C164&sr=8-1-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUEyVEdPM01XUkJZQ1pIJmVuY3J5cHRlZElkPUEwMTUxODM3MklCWE5FV0xXRTQ5NyZlbmNyeXB0ZWRBZElkPUEwNDU2NDY5MlpWMFdTSFpBVVRWVyZ3aWRnZXROYW1lPXNwX2F0ZiZhY3Rpb249Y2xpY2tSZWRpcmVjdCZkb05vdExvZ0NsaWNrPXRydWU=

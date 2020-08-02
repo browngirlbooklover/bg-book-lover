@@ -8,6 +8,7 @@ import BookTile from '../../components/bookTile/bookTile';
 import BlockQuote from '../../components/blockQuote/blockQuote';
 import CtaBtn from '../../components/cta-btn/ctaBtn';
 import CardCta from '../../components/cardCta/cardCta';
+import GroupLayout from '../../components/groupLayout/groupLayout';
 
 const Home = ({ data }) => {
   const { mainHeader, drawer, blockQuote, callToActionCards = [] } = data;
@@ -40,9 +41,11 @@ const Home = ({ data }) => {
           </AccordionPanel>
         ))}
       </Accordion>
-      {callToActionCards.map(({ image, caption }) => {
-        return <CardCta image={image} text={caption} />;
-      })}
+      <GroupLayout>
+        {callToActionCards.map(({ image, caption }) => {
+          return <CardCta image={image} text={caption} />;
+        })}
+      </GroupLayout>
     </motion.div>
   );
 };

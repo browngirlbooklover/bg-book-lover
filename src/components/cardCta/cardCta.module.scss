@@ -4,12 +4,17 @@
   width: 100%;
 
   .link {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: stretch;
+    width: 100%;
   }
 
   figcaption {
     background-color: $primary-100;
     color: $text-color-100;
+    height: 100%;
     padding: $spacing-300 $spacing-200;
     width: 100%;
   }

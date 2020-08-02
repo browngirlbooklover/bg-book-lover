@@ -21,22 +21,24 @@ const Header = ({ navLinks = [] }) => {
   return (
     <>
       <header className={styles['main-header']} role="banner">
-        <div className={styles.logo}>
-          <img src="/bgbl-logo.webp" alt="logo" />
+        <div className={styles['inner-container']}>
+          <div className={styles.logo}>
+            <img src="/imgs/bgbl-logo-white-letter.png" alt="logo" />
+          </div>
+          <nav className={styles['nav-container']} role="navigation">
+            <button
+              className={styles['toggle-menu']}
+              ref={btnRef}
+              onClick={onOpen}
+            >
+              <IoIosMenu />
+              <div className={styles['sub-text']}>menu</div>
+            </button>
+            <ol className={styles.list}>
+              <HeaderListItems navLinks={navLinks} />
+            </ol>
+          </nav>
         </div>
-        <nav className={styles['nav-container']} role="navigation">
-          <button
-            className={styles['toggle-menu']}
-            ref={btnRef}
-            onClick={onOpen}
-          >
-            <IoIosMenu />
-            <div className={styles['sub-text']}>menu</div>
-          </button>
-          <ol className={styles.list}>
-            <HeaderListItems navLinks={navLinks} />
-          </ol>
-        </nav>
       </header>
       <DrawerMenu btnRef={btnRef} isOpen={isOpen} onClose={onClose}>
         <ol className={styles['drawer-list']}>
