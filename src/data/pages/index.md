@@ -14,6 +14,7 @@ blockQuote:
   book: Crystelle Mourning
   author: Eisa Nefertari Ulen
   link: /about
+  cta_text: Watch Book Review
 drawer:
   - label: Powerful Memoirs
     books:

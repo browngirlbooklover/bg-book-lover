@@ -7,3 +7,20 @@
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   width: 100%;
 }
+
+.layout {
+  display: grid;
+  grid-row-gap: $spacing-400;
+}
+
+@media screen and (min-width: $bp-100) {
+  .layout {
+    grid-row-gap: $spacing-500;
+  }
+}
+
+@media screen and (min-width: $bp-200) {
+  .layout {
+    grid-row-gap: $spacing-600;
+  }
+}
