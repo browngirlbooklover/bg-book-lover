@@ -8,7 +8,12 @@ const BlockQuote = ({ image, quote, book, author }) => (
     </div>
     <p>{quote}</p>
     <footer>
-      —{author}, <cite>{book}</cite>
+      —{author}
+      {book && (
+        <>
+          , <cite>{book}</cite>
+        </>
+      )}
     </footer>
   </blockquote>
 );

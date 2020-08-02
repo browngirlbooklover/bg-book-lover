@@ -14,12 +14,23 @@
 }
 
 @media screen and (min-width: $bp-100) {
+  .acc-container {
+    grid-column-gap: $spacing-300;
+    grid-row-gap: $spacing-400;
+  }
+
   .layout {
     grid-row-gap: $spacing-500;
   }
 }
 
 @media screen and (min-width: $bp-200) {
+  .acc-container {
+    grid-column-gap: $spacing-400;
+    grid-row-gap: $spacing-500;
+    padding: $spacing-100 $spacing-300;
+  }
+
   .layout {
     grid-row-gap: $spacing-600;
   }

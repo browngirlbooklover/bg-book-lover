@@ -3,7 +3,7 @@ import { AiOutlinePlus, AiOutlineMinus } from 'react-icons/ai';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const variants = {
-  open: { opacity: 1, height: 'auto' },
+  open: { opacity: 1, height: '470px' },
   collapsed: { opacity: 0, height: 0 },
 };
 
