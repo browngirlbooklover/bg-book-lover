@@ -42,7 +42,7 @@ collections:
                 collapsed: true
                 fields:
                   - { label: 'Alt', name: 'alt', widget: 'string' }
-                  - { label: 'Src', name: 'city', widget: 'string' }
+                  - { label: 'Src', name: 'src', widget: 'string' }
           - label: 'Drawer'
             name: 'drawer'
             widget: list
