@@ -48,14 +48,14 @@ collections:
             widget: list
             fields:
               - { label: 'Label', name: 'label', widget: 'string' }
-              - label: 'Books', 
-                name: 'books',
+              - label: 'Books'
+                name: 'books'
                 widget: 'object'
                 fields:
                   - { label: 'Title', name: 'title', widget: 'string' }
-                  - { label: 'Link', name: 'link', widget: 'string' } 
-                  - { label: 'Image link', name: 'image', widget: 'string' } 
-                  - { label: 'Alt', name: 'alt', widget: 'string' } 
+                  - { label: 'Link', name: 'link', widget: 'string' }
+                  - { label: 'Image link', name: 'image', widget: 'string' }
+                  - { label: 'Alt', name: 'alt', widget: 'string' }
           - label: 'Call To Action Cards'
             name: 'callToActionCards'
             widget: 'list'
