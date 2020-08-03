@@ -3,7 +3,7 @@ import Footer from '../footer/footer';
 import Header from '../header/header';
 import styles from './layout.module.scss';
 
-const Layout = ({ data, navLinks, children }) => {
+const Layout = ({ data, logoImage, navLinks, children }) => {
   const { title = '', description = '' } = data;
   return (
     <>
@@ -16,7 +16,7 @@ const Layout = ({ data, navLinks, children }) => {
         <link rel="icon" href="/favicon.ico" />
         <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
       </Head>
-      <Header navLinks={navLinks} />
+      <Header logoImage={logoImage} navLinks={navLinks} />
       <main className={styles.body}>{children}</main>
       <Footer />
     </>

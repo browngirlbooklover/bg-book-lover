@@ -8,26 +8,22 @@ import { useRouter } from 'next/router';
 
 const HeaderListItems = ({ navLinks = [] }) => {
   const router = useRouter();
-  return navLinks.map((v) => {
-    const href = v === 'index' ? '/' : `/${v}`;
-    console.log(router.pathname, href);
-    return (
-      <li key={v}>
-        <Link href={href} scroll={false}>
-          <a
-            className={`${
-              router.pathname === href ? styles['selected-page'] : ''
-            }`}
-          >
-            {v === 'index' ? 'home' : v}
-          </a>
-        </Link>
-      </li>
-    );
-  });
+  return navLinks.map(({ href, name }) => (
+    <li key={name}>
+      <Link href={href} scroll={false}>
+        <a
+          className={`${
+            router.pathname === href ? styles['selected-page'] : ''
+          }`}
+        >
+          {name}
+        </a>
+      </Link>
+    </li>
+  ));
 };
 
-const Header = ({ navLinks = [] }) => {
+const Header = ({ logoImage, navLinks = [] }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = useRef();
 
@@ -36,7 +32,7 @@ const Header = ({ navLinks = [] }) => {
       <header className={styles['main-header']} role="banner">
         <div className={styles['inner-container']}>
           <div className={styles.logo}>
-            <img src="/imgs/bgbl-logo-white-letter.png" alt="logo" />
+            <img src={logoImage?.src} alt={logoImage?.alt} />
           </div>
           <nav className={styles['nav-container']} role="navigation">
             <button

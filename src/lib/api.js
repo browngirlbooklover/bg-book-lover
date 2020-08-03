@@ -22,15 +22,26 @@ export async function getPageData(page) {
 }
 
 /**
+ * Get Data associated with the app
+ */
+export async function getConfigData() {
+  const data = await import('../data/config.md');
+  return matter(data.default)?.data;
+}
+
+/**
  * Generates props for static props
  * @param {string} page The name of the page
  * @returns Page Props
  */
 export async function getPageProps(page) {
   const { data, content } = await getPageData(page);
+  const config = await getConfigData();
+  console.log(config);
   return {
     props: {
-      navLinks: getPageLists(),
+      logoImage: config?.logoImage,
+      navLinks: config?.navLinks,
       data,
       content,
     },
