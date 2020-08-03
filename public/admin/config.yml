@@ -19,21 +19,30 @@ collections:
             }
           - { label: 'Header', name: 'mainHeader', widget: 'string' }
           - label: 'Quote'
-            name: 'blockQuote', 
+            name: 'blockQuote'
             widget: 'object'
             fields:
-              - {label: "Quote", name: "quote", widget: "string"}
-              - {label: "Author", name: "author", widget: "string"}
-              - {label: "Link", name: "link", widget: "string"}
-              - {label: "Book", name: "book", widget: "string", required: false}
-              - {label: "Call To Action button", name: "cta_text", widget: "string"}
+              - { label: 'Quote', name: 'quote', widget: 'string' }
+              - { label: 'Author', name: 'author', widget: 'string' }
+              - { label: 'Link', name: 'link', widget: 'string' }
+              - {
+                  label: 'Book',
+                  name: 'book',
+                  widget: 'string',
+                  required: false,
+                }
+              - {
+                  label: 'Call To Action button',
+                  name: 'cta_text',
+                  widget: 'string',
+                }
               - label: 'Image'
                 name: 'image'
-                widget: "object"
+                widget: 'object'
                 collapsed: true
-                fields: 
-                  - {label: "Alt", name: "alt", widget: "string"}
-                  - {label: "Src", name: "city", widget: "string"}
+                fields:
+                  - { label: 'Alt', name: 'alt', widget: 'string' }
+                  - { label: 'Src', name: 'city', widget: 'string' }
           - label: 'Drawer'
             name: 'drawer'
             widget: list
@@ -48,8 +57,8 @@ collections:
               - { label: 'Link', name: 'caption', widget: 'string' }
               - label: 'Image'
                 name: 'image'
-                widget: "object"
+                widget: 'object'
                 collapsed: true
-                fields: 
-                  - {label: "Alt", name: "alt", widget: "string"}
-                  - {label: "Src", name: "city", widget: "string"}
+                fields:
+                  - { label: 'Alt', name: 'alt', widget: 'string' }
+                  - { label: 'Src', name: 'city', widget: 'string' }
