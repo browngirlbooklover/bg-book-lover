@@ -4,15 +4,28 @@ import DrawerMenu from '../drawerMenu/drawerMenu';
 import { useRef } from 'react';
 import { useDisclosure } from '@chakra-ui/core';
 import { IoIosMenu } from 'react-icons/io';
+import { useRouter } from 'next/router';
 
-const HeaderListItems = ({ navLinks = [] }) =>
-  navLinks.map((v) => (
-    <li key={v}>
-      <Link href={v === 'index' ? '/' : `/${v}`}>
-        <a>{v === 'index' ? 'home' : v}</a>
-      </Link>
-    </li>
-  ));
+const HeaderListItems = ({ navLinks = [] }) => {
+  const router = useRouter();
+  return navLinks.map((v) => {
+    const href = v === 'index' ? '/' : `/${v}`;
+    console.log(router.pathname, href);
+    return (
+      <li key={v}>
+        <Link href={href} scroll={false}>
+          <a
+            className={`${
+              router.pathname === href ? styles['selected-page'] : ''
+            }`}
+          >
+            {v === 'index' ? 'home' : v}
+          </a>
+        </Link>
+      </li>
+    );
+  });
+};
 
 const Header = ({ navLinks = [] }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();

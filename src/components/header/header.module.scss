@@ -43,6 +43,10 @@
     padding: $spacing-100 $spacing-300;
     text-decoration: none;
   }
+
+  .selected-page {
+    background-color: $tertiary-100;
+  }
 }
 
 .drawer-list {

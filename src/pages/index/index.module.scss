@@ -53,15 +53,15 @@
   .layout > div:last-of-type {
     align-self: flex-start;
     grid-column: 2;
-    grid-row: 2 / span 3;
+    grid-row: 4;
   }
 
   .layout > a {
-    grid-column: 1;
+    grid-column: 1 / span 2;
   }
 
   .layout > blockquote {
-    grid-column: 1;
+    grid-column: 1 / span 2;
   }
 }
 
