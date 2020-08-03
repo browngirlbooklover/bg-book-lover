@@ -50,7 +50,7 @@ collections:
               - { label: 'Label', name: 'label', widget: 'string' }
               - label: 'Books'
                 name: 'books'
-                widget: 'object'
+                widget: 'list'
                 fields:
                   - { label: 'Title', name: 'title', widget: 'string' }
                   - { label: 'Link', name: 'link', widget: 'string' }
