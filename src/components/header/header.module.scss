@@ -39,9 +39,10 @@
     border-radius: $spacing-50;
     color: $primary-100;
     display: block;
-    font-size: $font-size-300;
-    padding: $spacing-100 $spacing-300;
+    font-size: $font-size-200;
+    padding: $spacing-50 $spacing-200;
     text-decoration: none;
+    text-transform: capitalize;
   }
 
   .selected-page {
@@ -72,21 +73,25 @@
   }
 }
 
-.toggle-menu {
+.btn {
   background-color: $white;
-  border: 0;
   border-radius: $spacing-50;
   color: $primary-100;
   display: block;
+  font-size: $font-size-200;
+  padding: $spacing-50 $spacing-200;
+  text-transform: capitalize;
+}
+
+.toggle-menu {
+  border: 0;
   font-size: $font-size-700;
-  padding: $spacing-100 $spacing-300;
 
   .sub-text {
     font-size: $font-size-50;
   }
 }
-
-@media only screen and (min-width: 750px) {
+@media only screen and (min-width: $bp-300) {
   .list {
     display: flex;
   }

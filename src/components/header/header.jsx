@@ -12,9 +12,10 @@ const HeaderListItems = ({ navLinks = [] }) => {
     <li key={name}>
       <Link href={href} scroll={false}>
         <a
-          className={`${
-            router.pathname === href ? styles['selected-page'] : ''
-          }`}
+          className={
+            (styles.btn,
+            `${router.pathname === href ? styles['selected-page'] : ''}`)
+          }
         >
           {name}
         </a>
@@ -32,11 +33,15 @@ const Header = ({ logoImage, navLinks = [] }) => {
       <header className={styles['main-header']} role="banner">
         <div className={styles['inner-container']}>
           <div className={styles.logo}>
-            <img src={logoImage?.src} alt={logoImage?.alt} />
+            <Link href={'/'} scroll={false}>
+              <a>
+                <img src={logoImage?.src} alt={logoImage?.alt} />
+              </a>
+            </Link>
           </div>
           <nav className={styles['nav-container']} role="navigation">
             <button
-              className={styles['toggle-menu']}
+              className={`${styles.btn} ${styles['toggle-menu']}`}
               ref={btnRef}
               onClick={onOpen}
             >
