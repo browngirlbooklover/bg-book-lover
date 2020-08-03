@@ -8,7 +8,7 @@ const variants = {
 };
 
 const AccordionPanel = ({
-  id,
+  idx,
   index,
   title,
   children,
@@ -23,8 +23,8 @@ const AccordionPanel = ({
         }}
         aria-expanded={open}
         className={styles['trigger']}
-        aria-controls={`sect${id}`}
-        id={`accordion${id}`}
+        aria-controls={`sect${idx}`}
+        id={`accordion${idx}`}
       >
         <div className={styles['title']}>
           <span className={styles['icon']}>
@@ -37,9 +37,9 @@ const AccordionPanel = ({
     <AnimatePresence initial={false}>
       {open && (
         <motion.div
-          id={`sect${id}`}
+          id={`sect${idx}`}
           role="region"
-          aria-labelledby={`accordion${id}`}
+          aria-labelledby={`accordion${idx}`}
           className={styles.panel}
           initial="collapsed"
           animate="open"

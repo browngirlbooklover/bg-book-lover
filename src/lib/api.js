@@ -37,7 +37,6 @@ export async function getConfigData() {
 export async function getPageProps(page) {
   const { data, content } = await getPageData(page);
   const config = await getConfigData();
-  console.log(config);
   return {
     props: {
       logoImage: config?.logoImage,

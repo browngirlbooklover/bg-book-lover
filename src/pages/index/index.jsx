@@ -26,11 +26,11 @@ const Home = ({ data }) => {
       <CtaBtn link={blockQuote.link} text={blockQuote['cta_text']} />
       <Accordion>
         {drawer.map((obj, i) => (
-          <AccordionPanel id={`ap${i}`} key={i + obj.label} title={obj.label}>
+          <AccordionPanel idx={`ap${i}`} key={`ACC${i}`} title={obj.label}>
             <div className={styles['acc-container']}>
-              {obj.books.map((bk) => (
+              {obj.books.map((bk, x) => (
                 <BookTile
-                  key={bk.title}
+                  key={`${i}book${x}`}
                   title={bk.title}
                   link={bk.link}
                   src={bk.image}
