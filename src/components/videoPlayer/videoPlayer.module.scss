@@ -6,10 +6,13 @@
   figcaption {
     background-color: $secondary-100;
     border-radius: $spacing-50;
+    box-sizing: border-box;
     color: $text-color-200;
     font-size: $font-size-400;
-    margin-left: $spacing-300;
+    margin-top: $spacing-100;
     padding: $spacing-100 $spacing-200;
+    text-align: center;
+    width: 100%;
   }
 }
 
@@ -26,11 +29,24 @@
 }
 
 .play {
-  color: $tertiary-300;
+  color: $secondary-100;
   font-size: $font-size-700;
   left: 50%;
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
+}
+
+.yt-container {
+  height: 0;
+  max-width: $bp-400;
+  padding-top: calc((9 / 16) * 100%);
+  position: relative;
+  width: 100%;
+
+  iframe {
+    position: absolute;
+    top: 0;
+  }
 }
