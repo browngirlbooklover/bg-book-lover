@@ -7,12 +7,10 @@ navLinks:
     name: home
   - href: /about
     name: about
-  - href: /reviews
-    name: reviews
-  - href: /interviews
-    name: interviews
+  - href: /reviews-and-interviews
+    name: reviews & interviews
   - href: /events
     name: events
-  - href: /readingNow
+  - href: /reading-now
     name: reading now
 ---

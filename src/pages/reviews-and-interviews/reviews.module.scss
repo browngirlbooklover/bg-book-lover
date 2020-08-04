@@ -12,6 +12,15 @@
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
+.section {
+  h2 {
+    color: $tertiary-200;
+    font-size: $font-size-500;
+    font-weight: $font-weight-bold;
+    margin-bottom: $spacing-200;
+  }
+}
+
 @media screen and (min-width: $bp-200) {
   .layout {
     grid-row-gap: $spacing-600;
@@ -19,12 +28,20 @@
 
   .video-container {
     grid-row-gap: $spacing-600;
+
+    figure {
+      max-width: 40rem;
+    }
   }
 }
 
 @media screen and (min-width: $bp-300) {
   .video-container {
     grid-column-gap: $spacing-300;
+
+    figure {
+      max-width: 31.25rem;
+    }
   }
 }
 
