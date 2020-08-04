@@ -7,7 +7,7 @@ authorImage:
   src: /imgs/Leslie-Ann.jpg
   alt: Leslie-Ann Merry
 siteFacts:
-  title: Brown Girl Book Lover
+  title: Brown Girl Book Lover Facts
   facts:
     - Reviewing books that should be at the forefront of our imagination.
     - Reviewing books that are shifting the literary canon

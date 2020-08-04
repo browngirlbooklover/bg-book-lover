@@ -7,24 +7,25 @@ import BadgeGroup from '../../components/badgeGroup/badgeGroup';
 
 const About = ({ data, content }) => (
   <motion.div
+    className={styles.layout}
     initial="initial"
     animate="enter"
     exit="exit"
     variants={pageVariants}
   >
-    <section>
-      <h1 className="header-1">{data?.header}</h1>
+    <h1 className={`header-1 ${styles.header}`}>{data?.header}</h1>
+    <section className={styles.desc}>
       <p className={styles.about}>{data?.about}</p>
     </section>
-    <section>
+    <section className={styles.profile}>
       <Profile markup={content} image={data?.authorImage} />
     </section>
-    <section>
-      <h2>{data?.authorFacts?.title}</h2>
+    <section className={styles['author-facts']}>
+      <h2 className={styles['header-two']}>{data?.authorFacts?.title}</h2>
       <BadgeGroup badges={data?.authorFacts?.facts} />
     </section>
-    <section>
-      <h2>{data?.siteFacts?.title}</h2>
+    <section className={styles['site-facts']}>
+      <h2 className={styles['header-two']}>{data?.siteFacts?.title}</h2>
       <BadgeGroup badges={data?.siteFacts?.facts} />
     </section>
   </motion.div>
