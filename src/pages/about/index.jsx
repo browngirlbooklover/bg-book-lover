@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { pageVariants } from '../../lib/motionVariants';
 import ReactMarkdown from 'react-markdown';
 import styles from './about.module.scss';
+import Profile from '../../components/profile/profile';
 
 const About = ({ data, content }) => (
   <motion.div
@@ -16,10 +17,7 @@ const About = ({ data, content }) => (
       <p className={styles.about}>{data?.about}</p>
     </section>
     <section>
-      <div>{/* <Image /> */}</div>
-      <div>
-        <ReactMarkdown>{content}</ReactMarkdown>
-      </div>
+      <Profile markup={content} image={data.authorImage} />
     </section>
     <section>
       <h2></h2>
