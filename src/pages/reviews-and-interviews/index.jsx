@@ -14,7 +14,7 @@ const Reviews = ({ data }) => (
   >
     <h1 className="header-1">{data?.header}</h1>
     <section className={styles.section}>
-      <h2>{data?.reviews?.title}</h2>
+      <h2 className="header-two">{data?.reviews?.title}</h2>
       <div className={styles['video-container']}>
         {data?.reviews?.videos.map((v, i) => (
           <VideoPlayer
@@ -28,7 +28,7 @@ const Reviews = ({ data }) => (
       </div>
     </section>
     <section className={styles.section}>
-      <h2>{data?.interviews?.title}</h2>
+      <h2 className="header-two">{data?.interviews?.title}</h2>
       <div className={styles['video-container']}>
         {data?.interviews?.videos.map((v, i) => (
           <VideoPlayer

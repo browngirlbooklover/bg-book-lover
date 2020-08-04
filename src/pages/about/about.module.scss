@@ -13,13 +13,6 @@
   grid-row-gap: $spacing-400;
 }
 
-.header-two {
-  color: $tertiary-200;
-  font-size: $font-size-500;
-  font-weight: $font-weight-bold;
-  margin-bottom: $spacing-200;
-}
-
 @media screen and (min-width: $bp-200) {
   .layout {
     grid-row-gap: $spacing-600;

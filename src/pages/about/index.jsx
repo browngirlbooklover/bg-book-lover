@@ -21,11 +21,11 @@ const About = ({ data, content }) => (
       <Profile markup={content} image={data?.authorImage} />
     </section>
     <section className={styles['author-facts']}>
-      <h2 className={styles['header-two']}>{data?.authorFacts?.title}</h2>
+      <h2 className="header-two">{data?.authorFacts?.title}</h2>
       <BadgeGroup badges={data?.authorFacts?.facts} />
     </section>
     <section className={styles['site-facts']}>
-      <h2 className={styles['header-two']}>{data?.siteFacts?.title}</h2>
+      <h2 className={'header-two'}>{data?.siteFacts?.title}</h2>
       <BadgeGroup badges={data?.siteFacts?.facts} />
     </section>
   </motion.div>
