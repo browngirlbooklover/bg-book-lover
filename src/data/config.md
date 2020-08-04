@@ -1,6 +1,6 @@
 ---
 logoImage:
-  src: /imgs/bgbl-logo-white-letter.png
+  src: /imgs/new-bgbl-logo.svg
   alt: Brown Girl Book lover
 navLinks:
   - href: /
