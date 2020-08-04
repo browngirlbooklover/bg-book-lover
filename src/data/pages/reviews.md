@@ -16,19 +16,19 @@ videos:
   - title: Brown Girl Book Lover Reviews Monstress by writer Lysley Tenorio
     date: Apr 23, 2019
     poster:
-      src: http://i3.ytimg.com/vi/kJCSxnCHlN0/hqdefault.jpg
+      src: https://i3.ytimg.com/vi/kJCSxnCHlN0/hqdefault.jpg
       alt: Crystelle Mourning by Eisa Nefertari Ulen review
     videoLink: https://www.youtube.com/embed/kJCSxnCHlN0
   - title: Brown Girl Book Lover, reviews American Street by writer Ibi Zoboi.
     date: Apr 19, 2019
     poster:
-      src: http://i3.ytimg.com/vi/KLMhMYJokHM/hqdefault.jpg
+      src: https://i3.ytimg.com/vi/KLMhMYJokHM/hqdefault.jpg
       alt: American Street by writer Ibi Zoboi review
     videoLink: https://www.youtube.com/embed/KLMhMYJokHM
   - title: Whatever Happened to Interacial Love by Kathleen Collins
     date: Nov 11, 2019
     poster:
-      src: http://i3.ytimg.com/vi/Wx1IsDh1gqw/hqdefault.jpg
+      src: https://i3.ytimg.com/vi/Wx1IsDh1gqw/hqdefault.jpg
       alt: Whatever Happened to Interacial Love review
     videoLink: https://www.youtube.com/embed/Wx1IsDh1gqw
 ---
