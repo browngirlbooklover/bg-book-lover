@@ -4,7 +4,7 @@
   color: $text-color-200;
   font-size: $font-size-400;
   margin: auto;
-  max-width: 650px;
+  max-width: 40.625rem;
   text-align: center;
 }
 
@@ -18,6 +18,12 @@
   font-size: $font-size-500;
   font-weight: $font-weight-bold;
   margin-bottom: $spacing-200;
+}
+
+@media screen and (min-width: $bp-200) {
+  .layout {
+    grid-row-gap: $spacing-600;
+  }
 }
 
 @media screen and (min-width: $bp-300) {
@@ -44,13 +50,12 @@
   .layout {
     display: grid;
     grid-column-gap: $spacing-300;
-    grid-row-gap: $spacing-400;
     grid-template-areas:
       'header header header'
       'dec dec dec'
       'author profile profile'
       'author site site';
-    grid-template-columns: 1fr 1fr 350px;
+    grid-template-columns: 1fr 1fr 21.875rem;
   }
 }
 
