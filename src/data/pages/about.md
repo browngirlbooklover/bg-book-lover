@@ -7,14 +7,18 @@ authorImage:
   src: /imgs/Leslie-Ann.jpg
   alt: Leslie-Ann Merry
 siteFacts:
-  - Reviewing books that should be at the forefront of our imagination.
-  - Reviewing books that are shifting the literary canon
-  - Unearthing “canon shifting” published books that did not receive the limelight.
+  title: Brown Girl Book Lover
+  facts:
+    - Reviewing books that should be at the forefront of our imagination.
+    - Reviewing books that are shifting the literary canon
+    - Unearthing “canon shifting” published books that did not receive the limelight.
 authorFacts:
-  - I make a really bomb smoothie.
-  - I love trail running.
-  - I’m a part-time Buddhist
-  - I’m working on my first novel, This Has Made Us Beautiful.
+  title: Leslie-Ann Merry Facts
+  facts:
+    - I make a really bomb smoothie.
+    - I love trail running.
+    - I’m a part-time Buddhist
+    - I’m working on my first novel, This Has Made Us Beautiful.
 ---
 
 ## Leslie-Ann Murray

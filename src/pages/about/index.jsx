@@ -1,9 +1,9 @@
 import { getPageProps } from '../../lib/api';
 import { motion } from 'framer-motion';
 import { pageVariants } from '../../lib/motionVariants';
-import ReactMarkdown from 'react-markdown';
 import styles from './about.module.scss';
 import Profile from '../../components/profile/profile';
+import BadgeGroup from '../../components/badgeGroup/badgeGroup';
 
 const About = ({ data, content }) => (
   <motion.div
@@ -17,10 +17,15 @@ const About = ({ data, content }) => (
       <p className={styles.about}>{data?.about}</p>
     </section>
     <section>
-      <Profile markup={content} image={data.authorImage} />
+      <Profile markup={content} image={data?.authorImage} />
     </section>
     <section>
-      <h2></h2>
+      <h2>{data?.authorFacts?.title}</h2>
+      <BadgeGroup badges={data?.authorFacts?.facts} />
+    </section>
+    <section>
+      <h2>{data?.siteFacts?.title}</h2>
+      <BadgeGroup badges={data?.siteFacts?.facts} />
     </section>
   </motion.div>
 );
