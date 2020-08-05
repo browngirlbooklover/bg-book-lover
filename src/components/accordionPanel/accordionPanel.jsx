@@ -16,24 +16,23 @@ const AccordionPanel = ({
   onSel,
 }) => (
   <>
-    <h3>
-      <button
-        onClick={() => {
-          onSel(open ? false : index);
-        }}
-        aria-expanded={open}
-        className={styles['trigger']}
-        aria-controls={`sect${idx}`}
-        id={`accordion${idx}`}
-      >
-        <div className={styles['title']}>
-          <span className={styles['icon']}>
-            {open ? <AiOutlineMinus /> : <AiOutlinePlus />}
-          </span>
-          {title}
-        </div>
-      </button>
-    </h3>
+    <button
+      onClick={() => {
+        onSel(open ? false : index);
+      }}
+      aria-expanded={open}
+      className={styles['trigger']}
+      aria-controls={`sect${idx}`}
+      id={`accordion${idx}`}
+    >
+      <div className={styles['title']}>
+        <span className={styles['icon']}>
+          {open ? <AiOutlineMinus /> : <AiOutlinePlus />}
+        </span>
+        {title}
+      </div>
+    </button>
+
     <AnimatePresence initial={false}>
       {open && (
         <motion.div
