@@ -26,6 +26,11 @@
   text-transform: capitalize;
 }
 
+.block-section {
+  display: grid;
+  grid-row-gap: $spacing-400;
+}
+
 @media screen and (min-width: $bp-200) {
   .layout {
     grid-row-gap: $spacing-600;

@@ -2,6 +2,7 @@
 
 .blockquote {
   background-color: rgba($neutral-500, 0.7);
+  border-radius: $spacing-50;
   color: $text-color-100;
   overflow: hidden;
   padding: $spacing-300 $spacing-200;
@@ -12,7 +13,7 @@
   p {
     font-size: $font-size-500;
     margin: auto;
-    max-width: 600px;
+    max-width: $bp-400;
   }
 
   footer {
@@ -31,6 +32,23 @@
 
   img {
     mix-blend-mode: multiply;
+  }
+}
+
+.quote {
+  display: inline-block;
+  margin: $spacing-100;
+
+  svg {
+    display: inline-block;
+  }
+
+  &.left > svg {
+    transform: translateY(-$spacing-150);
+  }
+
+  &.right > svg {
+    transform: translateY($spacing-150);
   }
 }
 

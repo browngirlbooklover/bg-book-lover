@@ -10,7 +10,7 @@ blockQuote:
   image:
     src: /imgs/brooklyn-img-1.jpeg
     alt: Brooklyn
-  quote: “There is no greater agony than bearing an untold story inside you.
+  quote: There is no greater agony than bearing an untold story inside you.
   book: null
   author: Maya Angelou
   link: /reviews-and-interviews

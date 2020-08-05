@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { pageVariants } from '../../lib/motionVariants';
 import styles from './events.module.scss';
 import CardCta from '../../components/cardCta/cardCta';
+import BlockQuote from '../../components/blockQuote/blockQuote';
 
 const Events = ({ data, content }) => (
   <motion.div
@@ -32,7 +33,6 @@ const Events = ({ data, content }) => (
     <section>
       <h2 className="header-two">{data?.pastEvent?.title}</h2>
       <div className={styles['card-container']}>
-        {console.log(data?.pastEvent)}
         {data?.pastEvent?.events?.map((obj, i) => {
           return (
             <CardCta key={`pastEvents${i}`} image={obj?.image}>
@@ -45,6 +45,12 @@ const Events = ({ data, content }) => (
           );
         })}
       </div>
+    </section>
+    <section className={styles['block-section']}>
+      <h2 className="header-two">{data?.reviews?.title}</h2>
+      {data?.reviews?.reviews?.map((v, i) => (
+        <BlockQuote key={`bp${i}`} {...v} />
+      ))}
     </section>
   </motion.div>
 );
