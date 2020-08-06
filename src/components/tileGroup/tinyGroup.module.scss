@@ -1,0 +1,18 @@
+@import '../../themes/theme';
+
+.group {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  width: 100%;
+}
+
+.tile {
+  display: flex;
+  width: 100%;
+}
+
+.img-container {
+  height: 0;
+  padding-top: (2/7) * 100%;
+  width: 100%;
+}
