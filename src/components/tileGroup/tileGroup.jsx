@@ -10,14 +10,22 @@ const TileGroup = ({ tiles = [] }) => {
             <Image {...v.image} />
           </div>
           <div className={styles.content}>
-            <p className={styles.person}>
-              <span className={styles.name}>{v.name}</span>
-              <span className={styles.location}>{v.location}</span>
-            </p>
-            <p className={styles.literary}>
-              <span className={styles.book}>{v.book}</span>
-              <span className={styles.author}>{v.author}</span>
-            </p>
+            <div className={styles.name}>
+              {v.name}
+              <span className={styles.location}>, {v.location}</span>
+            </div>
+            <div className={styles.book}>
+              <em>{v.book}</em>
+            </div>
+            <div className={styles.author}>by {v.author}</div>
+            {v.book2 && (
+              <>
+                <div className={styles.book}>
+                  <em>{v.book2}</em>
+                </div>
+                <div className={styles.author}>by {v.author2}</div>
+              </>
+            )}
           </div>
         </div>
       ))}
