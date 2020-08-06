@@ -1,11 +1,11 @@
 import Image from '../image/image';
 import styles from './tileGroup.module.scss';
 
-const TileGroup = ({ tiles }) => {
+const TileGroup = ({ tiles = [] }) => {
   return (
     <div className={styles.group}>
-      {tiles.map((v) => (
-        <div className={styles.tile}>
+      {tiles.map((v, i) => (
+        <div key={`tile${i}`} className={styles.tile}>
           <div className={styles['img-container']}>
             <Image {...v.image} />
           </div>

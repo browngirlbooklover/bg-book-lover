@@ -1,13 +1,12 @@
 ---
-
 title: Brown Girl Book Lover/ Reading Now
 description: >-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo
-vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla
-facilisi morbi tempus.
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+  incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo
+  vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla
+  facilisi morbi tempus.
 header: What the book lovers are reading!
-tile:
+tiles:
   - name: Yama
     location: South Africa
     book: Fates and Furies
@@ -23,14 +22,14 @@ tile:
       alt: Tanesha with the Good Immigrant
       src: /imgs/tanesha-reading-now.jpg
   - name: Nusrat
-    location:  Bangladesh
+    location: Bangladesh
     book: The Sailor’s Wife
     author: Helen Benedict
     image:
       alt: Nusrat with The Sailor's Wife
       src: /imgs/nusrat-reading-now.jpg
   - name: Fariha
-    location:  Bangladesh
+    location: Bangladesh
     book: City of Friends
     author: Joanna Trollope
     image:
@@ -53,24 +52,23 @@ tile:
     author2: null
     image:
       alt: Margo with Midnight and Indigo
-      src: /imgs/margo-reading-now.jpg
+      src: /imgs/margo-reading-now.png
   - name: Serena
     location: Harlem
     book: Lover’s Executione
     author: Irvin D. Valon
-    book2: 
-    author2: 
+    book2:
+    author2:
     image:
       alt: Serena with Lover’s Executione
       src: /imgs/serena-reading-now.jpg
-  - name: Rasheed 
+  - name: Rasheed
     location: Brooklyn
-    book:  This Bridge Called My Back edited
+    book: This Bridge Called My Back edited
     author: Cherríe Moraga and Gloria E. Anzaldúa
-    book2: 
-    author2: 
+    book2:
+    author2:
     image:
       alt: This Bridge Called My Back edited
       src: /imgs/rasheed-reading-now.jpg
-
 ---
