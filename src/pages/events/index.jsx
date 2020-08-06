@@ -46,11 +46,13 @@ const Events = ({ data, content }) => (
         })}
       </div>
     </section>
-    <section className={styles['block-section']}>
+    <section>
       <h2 className="header-two">{data?.reviews?.title}</h2>
-      {data?.reviews?.reviews?.map((v, i) => (
-        <BlockQuote key={`bp${i}`} {...v} />
-      ))}
+      <div className={styles['block-section']}>
+        {data?.reviews?.reviews?.map((v, i) => (
+          <BlockQuote key={`bp${i}`} {...v} />
+        ))}
+      </div>
     </section>
   </motion.div>
 );
