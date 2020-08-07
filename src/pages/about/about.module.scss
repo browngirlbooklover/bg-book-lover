@@ -4,7 +4,6 @@
   color: $text-color-200;
   font-size: $font-size-400;
   margin: auto;
-  max-width: 40.625rem;
   text-align: center;
 }
 
@@ -47,7 +46,7 @@
       'header header header'
       'dec dec dec'
       'author profile profile'
-      'author site site';
+      'site site site';
     grid-template-columns: 1fr 1fr 21.875rem;
   }
 }
