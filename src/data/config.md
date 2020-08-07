@@ -7,8 +7,8 @@ navLinks:
     name: home
   - href: /about
     name: about
-  - href: /reviews-and-interviews
-    name: reviews & interviews
+  - href: /videos
+    name: videos
   - href: /events
     name: events
   - href: /reading-now
