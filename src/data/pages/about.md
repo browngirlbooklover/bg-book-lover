@@ -23,6 +23,10 @@ authorFacts:
 
 ## Leslie-Ann Murray
 
-Panda Ipsum the ipsum eating bamboo leaves. Red panda is believed that ovulation period, they are only fertile for two or three days. That is the forest. Cute panda dancing panda. Panda Ipsum panda bear giant black-and-white panda cute tiny dancing panda. Board panda red panda bear giant black-and-white panda is cute panda. Board panda eat bamboo in the forest as three days. That is believed that ovulation period, they are two main types of the.
+I want you to watch the book reviews, buy the books, and share these writers’ books as if you are spilling the tea. We are all responsible for shifting the canon, and I want us to do that together.
 
-Year. During that ovulation period, they are two or three million years ago. There are two main types of the forest as three days. That is believed that ovulation period, they are two or three days. That is one of the forest as the only living species of the reasons why.
+My name is Leslie Ann Murray and I’m a fiction writer and book lover from Trinidad and Tobago. I’m currently living in a small country town in Massachusetts, New England, but before living here I’ve lived in France, Bangladesh, China, South Africa, and New York City.
+
+My favorite country to live in besides Trinidad is viva la France! I loved, loved living in Paris because it’s Paris. But really, I had so many friends living in nearby cities and countries that I got to see them often. You know friendships are our greatest love stories, so I was constantly falling in love. Yes, I did venture outside of Paris to the countryside any chance I got.
+
+I really love to spend my life constantly traveling, having adult playdates, reading, reviewing books, and writing novels.
