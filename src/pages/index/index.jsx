@@ -10,7 +10,7 @@ import CtaBtn from '../../components/cta-btn/ctaBtn';
 import CardCta from '../../components/cardCta/cardCta';
 import GroupLayout from '../../components/groupLayout/groupLayout';
 import Link from 'next/link';
-import ComingSoonBlock from '../../components/comingSoonBlock/comingSoonBlock';
+import PlaceholderBlock from '../../components/placeholderBlock/PlaceholderBlock';
 
 const Home = ({ data }) => {
   const { mainHeader, drawer, blockQuote, callToActionCards = [] } = data;
@@ -41,7 +41,7 @@ const Home = ({ data }) => {
                 ))}
               </div>
             ) : (
-              <ComingSoonBlock />
+              <PlaceholderBlock />
             )}
           </AccordionPanel>
         ))}

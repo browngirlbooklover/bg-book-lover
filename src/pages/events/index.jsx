@@ -4,7 +4,8 @@ import { pageVariants } from '../../lib/motionVariants';
 import styles from './events.module.scss';
 import CardCta from '../../components/cardCta/cardCta';
 import BlockQuote from '../../components/blockQuote/blockQuote';
-import ComingSoonBlock from '../../components/comingSoonBlock/comingSoonBlock';
+import ComingSoonBlock from '../../components/placeholderBlock/PlaceholderBlock';
+import PlaceholderBlock from '../../components/placeholderBlock/PlaceholderBlock';
 
 const Events = ({ data, content }) => (
   <motion.div
@@ -32,7 +33,7 @@ const Events = ({ data, content }) => (
           })}
         </div>
       ) : (
-        <ComingSoonBlock />
+        <PlaceholderBlock />
       )}
     </section>
     <section>
@@ -52,7 +53,7 @@ const Events = ({ data, content }) => (
           })}
         </div>
       ) : (
-        <ComingSoonBlock />
+        <PlaceholderBlock />
       )}
     </section>
     <section>
