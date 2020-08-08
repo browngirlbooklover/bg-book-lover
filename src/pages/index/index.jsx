@@ -10,6 +10,7 @@ import CtaBtn from '../../components/cta-btn/ctaBtn';
 import CardCta from '../../components/cardCta/cardCta';
 import GroupLayout from '../../components/groupLayout/groupLayout';
 import Link from 'next/link';
+import ComingSoonBlock from '../../components/comingSoonBlock/comingSoonBlock';
 
 const Home = ({ data }) => {
   const { mainHeader, drawer, blockQuote, callToActionCards = [] } = data;
@@ -27,17 +28,21 @@ const Home = ({ data }) => {
       <Accordion>
         {drawer.map((obj, i) => (
           <AccordionPanel idx={`ap${i}`} key={`ACC${i}`} title={obj.label}>
-            <div className={styles['acc-container']}>
-              {obj.books.map((bk, x) => (
-                <BookTile
-                  key={`${i}book${x}`}
-                  title={bk.title}
-                  link={bk.link}
-                  src={bk.image}
-                  alt={bk.alt}
-                />
-              ))}
-            </div>
+            {obj?.books?.length > 0 ? (
+              <div className={styles['acc-container']}>
+                {obj?.books?.map((bk, x) => (
+                  <BookTile
+                    key={`${i}book${x}`}
+                    title={bk.title}
+                    link={bk.link}
+                    src={bk.image}
+                    alt={bk.alt}
+                  />
+                ))}
+              </div>
+            ) : (
+              <ComingSoonBlock />
+            )}
           </AccordionPanel>
         ))}
       </Accordion>
