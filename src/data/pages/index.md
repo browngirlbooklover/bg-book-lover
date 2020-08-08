@@ -13,7 +13,7 @@ blockQuote:
   quote: There is no greater agony than bearing an untold story inside you.
   book: null
   author: Maya Angelou
-  link: /reviews-and-interviews
+  link: /videos
   cta_text: Recent Book Reviews
 callToActionCards:
   - image:
