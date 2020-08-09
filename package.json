@@ -27,7 +27,9 @@
     "react-markdown": "^4.3.1",
     "remark": "^12.0.1",
     "remark-html": "^12.0.0",
-    "sass": "^1.26.10"
+    "sass": "^1.26.10",
+    "styled-components": "^5.1.1",
+    "tinacms": "^0.26.0"
   },
   "devDependencies": {
     "autoprefixer": "^9.8.5",

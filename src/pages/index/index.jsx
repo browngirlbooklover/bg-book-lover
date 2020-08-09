@@ -11,9 +11,14 @@ import CardCta from '../../components/cardCta/cardCta';
 import GroupLayout from '../../components/groupLayout/groupLayout';
 import Link from 'next/link';
 import PlaceholderBlock from '../../components/placeholderBlock/PlaceholderBlock';
+import { useForm, usePlugin } from 'tinacms';
+import homeFormConfig from '../../data/cmsForm/homeForm';
 
 const Home = ({ data }) => {
-  const { mainHeader, drawer, blockQuote, callToActionCards = [] } = data;
+  const formConfig = homeFormConfig(data);
+  const [dataA, form] = useForm(formConfig);
+  usePlugin(form);
+  const { mainHeader, drawer, blockQuote, callToActionCards = [] } = dataA;
   return (
     <motion.div
       className={styles.layout}
