@@ -9,4 +9,5 @@ export default function Authorizing() {
   return <h2>Authorizing with GitHub, please wait...</h2>;
 }
 
-export const getStaticProps = async () => getPageProps('index');
+export const getStaticProps = async ({ preview, previewData }) =>
+  getPageProps('index', preview, previewData);

@@ -1,6 +1,6 @@
 import fs from 'fs';
 import matter from 'gray-matter';
-// import { getGithubPreviewProps, parseJson } from 'next-tinacms-github';
+import { getGithubPreviewProps, parseJson } from 'next-tinacms-github';
 
 /**
  * Returns a list pages
@@ -35,17 +35,18 @@ export async function getConfigData() {
  * @param {string} page The name of the page
  * @returns Page Props
  */
-export async function getPageProps(page) {
+export async function getPageProps(page, preview, previewData) {
   const { data, content } = await getPageData(page);
   const config = await getConfigData();
 
-  // if (preview) {
-  //   return getGithubPreviewProps({
-  //     ...previewData,
-  //     fileRelativePath: 'content/home.json',
-  //     parse: parseJson,
-  //   });
-  // }
+  if (preview) {
+    console.log(preview, parseJson);
+    return getGithubPreviewProps({
+      ...previewData,
+      fileRelativePath: 'src/data/pages/index.md',
+      parse: parseJson,
+    });
+  }
 
   return {
     props: {
@@ -56,6 +57,7 @@ export async function getPageProps(page) {
       navLinks: config?.navLinks,
       data,
       content,
+      fileRelativePath: 'src/data/pages/index.md',
     },
   };
 }
