@@ -14,11 +14,14 @@ const onLogin = async () => {
     headers.append('Authorization', 'Bearer ' + token);
   }
 
-  const resp = await fetch(`/api/preview`, { headers: headers });
+  const resp = await fetch(`/api/preview`, { headers });
   const data = await resp.json();
 
-  if (resp.status == 200) window.location.href = window.location.pathname;
-  else throw new Error(data.message);
+  if (resp.status === 200) {
+    window.location.reload();
+  } else {
+    throw new Error(data.message);
+  }
 };
 
 const onLogout = () => {
@@ -26,6 +29,13 @@ const onLogout = () => {
     window.location.reload();
   });
 };
+
+const github = new GithubClient({
+  proxy: '/api/proxy-github',
+  authCallbackRoute: '/api/create-github-access-token',
+  clientId: process.env.GITHUB_CLIENT_ID,
+  baseRepoFullName: process.env.REPO_FULL_NAME,
+});
 
 /**
  *
@@ -42,24 +52,15 @@ export const EditLink = ({ cms }) => {
 function MyApp({ Component, pageProps }) {
   // during build process these properties are null and can cause errors
   const { navLinks = [], data = {}, logoImage = {} } = pageProps;
-  const cms = useMemo(() => {
-    console.log('here', pageProps.preview);
 
+  const cms = useMemo(() => {
     return new TinaCMS({
-      enabled: !!pageProps.preview,
+      enabled: pageProps?.preview,
       apis: {
-        /**
-         * 2. Register the GithubClient
-         */
-        github: new GithubClient({
-          proxy: '/api/proxy-github',
-          authCallbackRoute: '/api/create-github-access-token',
-          clientId: process.env.GITHUB_CLIENT_ID,
-          baseRepoFullName: process.env.REPO_FULL_NAME, // e.g: tinacms/tinacms.org,
-        }),
+        github,
       },
-      toolbar: pageProps.preview,
-      sidebar: pageProps.preview,
+      toolbar: pageProps?.preview,
+      sidebar: pageProps?.preview,
     });
   }, []);
 
@@ -71,12 +72,8 @@ function MyApp({ Component, pageProps }) {
         error={pageProps?.error}
       >
         <EditLink cms={cms} />
-
         <ThemeProvider>
           <CSSReset />
-          {/**
-           * 5. Add a button for entering Preview/Edit Mode
-           */}
           <Layout logoImage={logoImage} data={data} navLinks={navLinks}>
             <AnimatePresence initial={false} exitBeforeEnter>
               <Component {...pageProps} />

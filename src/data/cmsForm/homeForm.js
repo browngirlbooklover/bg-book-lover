@@ -1,14 +1,8 @@
 import getObjValue from '../../lib/getObjValue';
 
-const homeFormConfig = (data) => ({
+const homeFormConfig = {
   id: 'index', // a unique identifier for this instance of the form
   label: 'Home page', // name of the form to appear in the sidebar
-  initialValues: data, // populate the form with starting values
-  onSubmit: (values) => {
-    // do something with the data when the form is submitted
-    // alert(`Submitting ${values.title}`);
-    console.log(values);
-  },
   fields: [
     // define fields to appear in the form
     {
@@ -148,6 +142,6 @@ const homeFormConfig = (data) => ({
       ],
     },
   ],
-});
+};
 
 export default homeFormConfig;

@@ -11,13 +11,18 @@ import CardCta from '../../components/cardCta/cardCta';
 import GroupLayout from '../../components/groupLayout/groupLayout';
 import Link from 'next/link';
 import PlaceholderBlock from '../../components/placeholderBlock/PlaceholderBlock';
-import { useForm, usePlugin } from 'tinacms';
+import { usePlugin } from 'tinacms';
 import homeFormConfig from '../../data/cmsForm/homeForm';
+import {
+  useGithubMarkdownForm,
+  useGithubToolbarPlugins,
+} from 'react-tinacms-github';
 
-const Home = ({ data }) => {
-  const formConfig = homeFormConfig(data);
-  const [dataA, form] = useForm(formConfig);
+const Home = ({ file }) => {
+  const formConfig = homeFormConfig;
+  const [dataA, form] = useGithubMarkdownForm(file, formConfig);
   usePlugin(form);
+  useGithubToolbarPlugins();
   const { mainHeader, drawer, blockQuote, callToActionCards = [] } = dataA;
   return (
     <motion.div
@@ -29,19 +34,19 @@ const Home = ({ data }) => {
     >
       <h1 className="header-1">{mainHeader}</h1>
       <BlockQuote {...blockQuote} />
-      <CtaBtn link={blockQuote.link} text={blockQuote['cta_text']} />
+      <CtaBtn link={blockQuote?.link} text={blockQuote?.cta_text} />
       <Accordion>
         {drawer.map((obj, i) => (
-          <AccordionPanel idx={`ap${i}`} key={`ACC${i}`} title={obj.label}>
+          <AccordionPanel idx={`ap${i}`} key={`ACC${i}`} title={obj?.label}>
             {obj?.books?.length > 0 ? (
               <div className={styles['acc-container']}>
                 {obj?.books?.map((bk, x) => (
                   <BookTile
                     key={`${i}book${x}`}
-                    title={bk.title}
-                    link={bk.link}
-                    src={bk.image}
-                    alt={bk.alt}
+                    title={bk?.title}
+                    link={bk?.link}
+                    src={bk?.image}
+                    alt={bk?.alt}
                   />
                 ))}
               </div>
@@ -72,6 +77,7 @@ const Home = ({ data }) => {
   );
 };
 
-export const getStaticProps = async () => getPageProps('index');
+export const getStaticProps = async ({ preview, previewData }) =>
+  getPageProps('index', preview, previewData);
 
 export default Home;

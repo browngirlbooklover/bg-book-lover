@@ -1,6 +1,6 @@
 import fs from 'fs';
 import matter from 'gray-matter';
-import { getGithubPreviewProps, parseJson } from 'next-tinacms-github';
+import { getGithubPreviewProps, parseMarkdown } from 'next-tinacms-github';
 
 /**
  * Returns a list pages
@@ -19,7 +19,7 @@ export function getPageLists() {
  */
 export async function getPageData(page) {
   const content = await import(`../data/pages/${page}.md`);
-  return matter(content.default);
+  return matter(content?.default);
 }
 
 /**
@@ -35,29 +35,46 @@ export async function getConfigData() {
  * @param {string} page The name of the page
  * @returns Page Props
  */
-export async function getPageProps(page, preview, previewData) {
+export async function getPageProps(page, preview = false, previewData = null) {
   const { data, content } = await getPageData(page);
   const config = await getConfigData();
 
   if (preview) {
-    console.log(preview, parseJson);
-    return getGithubPreviewProps({
+    const gitHubProps = await getGithubPreviewProps({
       ...previewData,
-      fileRelativePath: 'src/data/pages/index.md',
-      parse: parseJson,
+      fileRelativePath: `/src/data/pages/${page}.md`,
+      parse: parseMarkdown,
     });
+    const file = gitHubProps?.props?.file;
+    return {
+      props: {
+        sourceProvider: null,
+        logoImage: config?.logoImage,
+        navLinks: config?.navLinks,
+        data,
+        content,
+        ...gitHubProps?.props,
+        file: {
+          ...file,
+          data: file?.data?.frontmatter,
+        },
+      },
+    };
   }
 
   return {
     props: {
       sourceProvider: null,
-      error: null,
-      preview: false,
       logoImage: config?.logoImage,
       navLinks: config?.navLinks,
       data,
       content,
-      fileRelativePath: 'src/data/pages/index.md',
+      error: null,
+      preview,
+      file: {
+        data: data,
+        fileRelativePath: `/src/data/pages/${page}.md`,
+      },
     },
   };
 }
