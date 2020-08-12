@@ -1,5 +1,5 @@
 import { useGithubAuthRedirect } from 'react-tinacms-github';
-import { getPageProps } from '../../lib/api';
+import { getPageProps } from '../../util/api';
 
 // Our GitHub app redirects back to this page with auth code
 export default function Authorizing() {

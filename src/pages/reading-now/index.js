@@ -1,6 +1,6 @@
-import { getPageProps } from '../../lib/api';
+import { getPageProps } from '../../util/api';
 import { motion } from 'framer-motion';
-import { pageVariants } from '../../lib/motionVariants';
+import { pageVariants } from '../../util/motionVariants';
 import TileGroup from '../../components/tileGroup/tileGroup';
 import styles from './readingNow.module.scss';
 

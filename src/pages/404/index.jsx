@@ -1,4 +1,4 @@
-import { getPageProps } from '../../lib/api';
+import { getPageProps } from '../../util/api';
 import styles from './404.module.scss';
 
 const Page404 = () => (

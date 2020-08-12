@@ -46,6 +46,7 @@ export async function getPageProps(page, preview = false, previewData = null) {
       parse: parseMarkdown,
     });
     const file = gitHubProps?.props?.file;
+
     return {
       props: {
         sourceProvider: null,
@@ -72,6 +73,7 @@ export async function getPageProps(page, preview = false, previewData = null) {
       error: null,
       preview,
       file: {
+        sha: '',
         data: data,
         fileRelativePath: `/src/data/pages/${page}.md`,
       },

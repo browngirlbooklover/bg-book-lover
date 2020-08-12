@@ -1,7 +1,7 @@
 import styles from './index.module.scss';
-import { getPageProps } from '../../lib/api';
+import { getPageProps } from '../../util/api';
 import { motion } from 'framer-motion';
-import { pageVariants } from '../../lib/motionVariants';
+import { pageVariants } from '../../util/motionVariants';
 import Accordion from '../../components/accordion/accordion';
 import AccordionPanel from '../../components/accordionPanel/accordionPanel';
 import BookTile from '../../components/bookTile/bookTile';
@@ -21,6 +21,7 @@ import {
 const Home = ({ file }) => {
   const formConfig = homeFormConfig;
   const [dataA, form] = useGithubMarkdownForm(file, formConfig);
+
   usePlugin(form);
   useGithubToolbarPlugins();
   const { mainHeader, drawer, blockQuote, callToActionCards = [] } = dataA;

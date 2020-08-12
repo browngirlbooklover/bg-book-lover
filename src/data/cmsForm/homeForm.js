@@ -1,4 +1,4 @@
-import getObjValue from '../../lib/getObjValue';
+import getObjValue from '../../util/getObjValue';
 
 const homeFormConfig = {
   id: 'index', // a unique identifier for this instance of the form
