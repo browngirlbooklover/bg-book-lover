@@ -17,15 +17,15 @@ blockQuote:
   cta_text: Recent Book Reviews
 callToActionCards:
   - image:
-      src: /imgs/library-img-2.jpeg
-      alt: library
-    caption: See What the Community is Reading
-    link: /reading-now
-  - image:
       src: /imgs/library-img-1.jpeg
       alt: library
     caption: What’s on My Shelf?
     link: /about
+  - image:
+      src: /imgs/library-img-2.jpeg
+      alt: library
+    caption: See What the Community is Reading
+    link: /reading-now
 drawer:
   - label: Powerful Memoirs
     books: null
