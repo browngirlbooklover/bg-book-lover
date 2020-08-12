@@ -6,13 +6,13 @@ const homeFormConfig = {
   fields: [
     // define fields to appear in the form
     {
-      name: 'mainHeader', // field name maps to the corresponding key in initialValues
+      name: 'frontmatter.mainHeader', // field name maps to the corresponding key in initialValues
       label: 'Main Page Header', // label that appears above the field
       component: 'text', // the component used to handle UI and input to the field
     },
     {
       label: 'Block Quote',
-      name: 'blockQuote',
+      name: 'frontmatter.blockQuote',
       description: 'Block Quote',
       component: 'group',
       fields: [
@@ -65,7 +65,7 @@ const homeFormConfig = {
     },
     {
       label: 'Accordion',
-      name: 'drawer',
+      name: 'frontmatter.drawer',
       component: 'group-list',
       description: 'List of Accordion Panels',
       fields: [
@@ -106,7 +106,7 @@ const homeFormConfig = {
     },
     {
       label: 'Call To Action Cards',
-      name: 'callToActionCards',
+      name: 'frontmatter.callToActionCards',
       component: 'group-list',
       description: 'List of CTA Cards',
       fields: [

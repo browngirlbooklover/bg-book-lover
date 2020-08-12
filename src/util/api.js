@@ -54,11 +54,8 @@ export async function getPageProps(page, preview = false, previewData = null) {
         navLinks: config?.navLinks,
         data,
         content,
+        file,
         ...gitHubProps?.props,
-        file: {
-          ...file,
-          data: file?.data?.frontmatter,
-        },
       },
     };
   }
@@ -74,7 +71,10 @@ export async function getPageProps(page, preview = false, previewData = null) {
       preview,
       file: {
         sha: '',
-        data: data,
+        data: {
+          frontmatter: data,
+          markdownBody: content,
+        },
         fileRelativePath: `/src/data/pages/${page}.md`,
       },
     },

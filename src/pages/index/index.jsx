@@ -19,8 +19,9 @@ import {
 } from 'react-tinacms-github';
 
 const Home = ({ file }) => {
-  const formConfig = homeFormConfig;
-  const [dataA, form] = useGithubMarkdownForm(file, formConfig);
+  const [data, form] = useGithubMarkdownForm(file, homeFormConfig);
+
+  const dataA = data.frontmatter;
 
   usePlugin(form);
   useGithubToolbarPlugins();
