@@ -38,6 +38,7 @@ export async function getConfigData() {
 export async function getPageProps(page, preview = false, previewData = null) {
   const { data, content } = await getPageData(page);
   const config = await getConfigData();
+  console.log('***STOP IN THE NAME OF LOVE***', preview, previewData);
 
   if (preview) {
     const gitHubProps = await getGithubPreviewProps({
@@ -46,7 +47,7 @@ export async function getPageProps(page, preview = false, previewData = null) {
       parse: parseMarkdown,
     });
     const file = gitHubProps?.props?.file;
-
+    console.log('***STOP IN THE NAME OF LOVE***', gitHubProps);
     return {
       props: {
         sourceProvider: null,

@@ -18,6 +18,7 @@ const onLogin = async () => {
   const data = await resp.json();
 
   if (resp.status === 200) {
+    console.log(resp, data);
     window.location.reload();
   } else {
     throw new Error(data.message);
