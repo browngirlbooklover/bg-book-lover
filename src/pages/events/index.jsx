@@ -1,4 +1,4 @@
-import { getPageProps } from '../../utils/api';
+import { getPageProps } from '../../util/api';
 import { motion } from 'framer-motion';
 import { pageVariants } from '../../util/motionVariants';
 import styles from './events.module.scss';
