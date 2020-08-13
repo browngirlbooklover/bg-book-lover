@@ -12,6 +12,7 @@
     "lint": "eslint --ext .js,.jsx,.ts,.tsx"
   },
   "dependencies": {
+    "@auth0/auth0-react": "^1.0.0",
     "@chakra-ui/core": "^0.8.0",
     "@emotion/core": "^10.0.28",
     "@emotion/styled": "^10.0.27",

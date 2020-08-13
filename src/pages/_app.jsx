@@ -5,6 +5,7 @@ import '../themes/global.scss';
 import { AnimatePresence } from 'framer-motion';
 import { TinaProvider, TinaCMS } from 'tinacms';
 import { GithubClient, TinacmsGithubProvider } from 'react-tinacms-github';
+import { Auth0Provider } from '@auth0/auth0-react';
 
 const onLogin = async () => {
   const token = localStorage.getItem('tinacms-github-token') || null;
@@ -66,23 +67,29 @@ function MyApp({ Component, pageProps }) {
   }, []);
 
   return (
-    <TinaProvider cms={cms}>
-      <TinacmsGithubProvider
-        onLogin={onLogin}
-        onLogout={onLogout}
-        error={pageProps?.error}
-      >
-        <EditLink cms={cms} />
-        <ThemeProvider>
-          <CSSReset />
-          <Layout logoImage={logoImage} data={data} navLinks={navLinks}>
-            <AnimatePresence initial={false} exitBeforeEnter>
-              <Component {...pageProps} />
-            </AnimatePresence>
-          </Layout>
-        </ThemeProvider>
-      </TinacmsGithubProvider>
-    </TinaProvider>
+    <Auth0Provider
+      domain="hartecode.us.auth0.com"
+      clientId={process.env.AUTH0_CLIENT_ID}
+      redirectUri="https://bg-book-lover.vercel.app/master"
+    >
+      <TinaProvider cms={cms}>
+        <TinacmsGithubProvider
+          onLogin={onLogin}
+          onLogout={onLogout}
+          error={pageProps?.error}
+        >
+          <EditLink cms={cms} />
+          <ThemeProvider>
+            <CSSReset />
+            <Layout logoImage={logoImage} data={data} navLinks={navLinks}>
+              <AnimatePresence initial={false} exitBeforeEnter>
+                <Component {...pageProps} />
+              </AnimatePresence>
+            </Layout>
+          </ThemeProvider>
+        </TinacmsGithubProvider>
+      </TinaProvider>
+    </Auth0Provider>
   );
 }
 
