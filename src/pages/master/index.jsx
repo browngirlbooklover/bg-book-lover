@@ -1,24 +1,21 @@
-import { useAuth0 } from '@auth0/auth0-react';
 import { getPageProps } from '../../util/api';
 import styles from './master.module.scss';
+import Link from 'next/link';
 
 const Master = () => {
-  const { loginWithRedirect, isAuthenticated, logout } = useAuth0();
   return (
     <div>
       <h1>
         Your are currently{' '}
-        {isAuthenticated ? 'Logged In!' : 'not logged in.  :('}
+        {/* {isAuthenticated ? 'Logged In!' : 'not logged in.  :('} */}
       </h1>
-      <button className={styles.button} onClick={() => loginWithRedirect()}>
-        Log In
-      </button>
-      <button
-        className={styles.button}
-        onClick={() => logout({ returnTo: window?.location?.origin })}
-      >
-        Log Out
-      </button>
+      <Link href="/api/login">
+        <a className={styles.button}>Log In</a>
+      </Link>
+
+      <Link href="/api/logout">
+        <a className={styles.button}>Log out</a>
+      </Link>
     </div>
   );
 };

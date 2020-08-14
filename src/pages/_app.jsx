@@ -1,11 +1,11 @@
-import { useMemo } from 'react';
+import { useMemo, useEffect } from 'react';
 import { ThemeProvider, CSSReset } from '@chakra-ui/core';
 import Layout from '../components/layout/layout';
 import '../themes/global.scss';
 import { AnimatePresence } from 'framer-motion';
 import { TinaProvider, TinaCMS } from 'tinacms';
 import { GithubClient, TinacmsGithubProvider } from 'react-tinacms-github';
-import { Auth0Provider } from '@auth0/auth0-react';
+import { useFetchUser } from '../util/user';
 
 const onLogin = async () => {
   const token = localStorage.getItem('tinacms-github-token') || null;
@@ -54,6 +54,7 @@ export const EditLink = ({ cms }) => {
 function MyApp({ Component, pageProps }) {
   // during build process these properties are null and can cause errors
   const { navLinks = [], data = {}, logoImage = {} } = pageProps;
+  const { user, loading } = useFetchUser();
 
   const cms = useMemo(() => {
     return new TinaCMS({
@@ -66,30 +67,39 @@ function MyApp({ Component, pageProps }) {
     });
   }, []);
 
+  useEffect(() => {
+    if (cms.enabled && !user && !loading) {
+      onLogout();
+    }
+  }, [user, loading]);
+
   return (
-    <Auth0Provider
-      domain="hartecode.us.auth0.com"
-      clientId={process.env.AUTH0_CLIENT_ID}
-      redirectUri="https://bg-book-lover.vercel.app/master"
-    >
-      <TinaProvider cms={cms}>
-        <TinacmsGithubProvider
-          onLogin={onLogin}
-          onLogout={onLogout}
-          error={pageProps?.error}
-        >
-          <EditLink cms={cms} />
-          <ThemeProvider>
-            <CSSReset />
-            <Layout logoImage={logoImage} data={data} navLinks={navLinks}>
-              <AnimatePresence initial={false} exitBeforeEnter>
-                <Component {...pageProps} />
-              </AnimatePresence>
-            </Layout>
-          </ThemeProvider>
-        </TinacmsGithubProvider>
-      </TinaProvider>
-    </Auth0Provider>
+    <TinaProvider cms={cms}>
+      <TinacmsGithubProvider
+        onLogin={onLogin}
+        onLogout={onLogout}
+        error={pageProps?.error}
+      >
+        {user && !loading && (
+          <>
+            <EditLink cms={cms} />
+            <p>
+              {user && !loading
+                ? `you are logedin, ${user.given_name}!`
+                : 'better luck next time'}
+            </p>
+          </>
+        )}
+        <ThemeProvider>
+          <CSSReset />
+          <Layout logoImage={logoImage} data={data} navLinks={navLinks}>
+            <AnimatePresence initial={false} exitBeforeEnter>
+              <Component {...pageProps} />
+            </AnimatePresence>
+          </Layout>
+        </ThemeProvider>
+      </TinacmsGithubProvider>
+    </TinaProvider>
   );
 }
 
