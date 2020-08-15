@@ -6,6 +6,7 @@ import { AnimatePresence } from 'framer-motion';
 import { TinaProvider, TinaCMS } from 'tinacms';
 import { GithubClient, TinacmsGithubProvider } from 'react-tinacms-github';
 import { useFetchUser } from '../util/user';
+import Link from 'next/link';
 
 const onLogin = async () => {
   const token = localStorage.getItem('tinacms-github-token') || null;
@@ -88,6 +89,9 @@ function MyApp({ Component, pageProps }) {
                 ? `you are logedin, ${user.given_name}!`
                 : 'better luck next time'}
             </p>
+            <Link href="/api/logout">
+              <a>Log out</a>
+            </Link>
           </>
         )}
         <ThemeProvider>
